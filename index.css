@@ -1,0 +1,19 @@
+h1{
+    color:black;
+  }
+
+.btn{
+    cursor:pointer;
+}
+.clicked{
+    color:black;
+  }
+
+.form,
+.greetings{
+    display: none;
+}
+
+.showing{
+    display:block;
+}
