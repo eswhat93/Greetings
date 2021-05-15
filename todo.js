@@ -7,22 +7,32 @@ const TODOS_LS = "toDos";
 //삭제하기 위한 배열 값 주기
 const toDos = [];
 
+
+//toDo 로컬에 저장
+function saveToDos(){
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+
 function paintTodo(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
+    const newId = toDos.length + 1
     delBtn.innerHTML = "X";
     
     const span = document.createElement("span");
     span.innerText = text;
+    
     li.appendChild(span);
     li.appendChild(delBtn);
+    li.id = newId;
     toDoList.appendChild(li);
 
     const toDoObj = {
         text,
-        id:toDos.length + 1
+        id:newId
     };
     toDos.push(toDoObj);
+    saveToDos();
 }
 
 function handleSubmit(event){
@@ -33,9 +43,11 @@ function handleSubmit(event){
 }
 
 function loadToDos(){
-    const toDos = localStorage.getItem(TODOS_LS);
-    if(toDos !== null){
-
+    const loadedToDos = localStorage.getItem(TODOS_LS);
+    if(loadedToDos !== null){
+        console.log(loadedToDos);
+        const parsedToDos = JSON.parse(loadedToDos);
+        console.log(parsedToDos);
     }else{
 
     }
