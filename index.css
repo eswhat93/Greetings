@@ -2,10 +2,35 @@ body{
   background-color:white;
 }
 
-h1,h4{
+h1{
+    font-size: 120px;
+    text-align: center;
     color:white;
+    margin-bottom: 0;
   }
 
+h4, li{
+  margin-top: 0;
+  font-size: 50px;
+  color:white;
+  text-align: center;
+}
+
+.js-toDoForm input{
+  width: 100%;
+  padding-top: 4px;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 2.25em;
+  line-height: 1.2;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+  transition: border-color .2s ease;
+}
 .btn{
     cursor:pointer;
 }
@@ -38,4 +63,16 @@ h1,h4{
   height:100%;
   z-index:-1;
   animation: fadeIn 0.5s linear;
+}
+
+.container{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+.item{
+  flex:1;
+  flex-basis: auto;
 }
