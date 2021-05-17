@@ -16,7 +16,8 @@ h4, li{
   text-align: center;
 }
 
-.js-toDoForm input{
+.js-toDoForm input,
+.js-form input{
   width: 100%;
   padding-top: 4px;
   display: block;
@@ -31,6 +32,7 @@ h4, li{
   text-align: center;
   transition: border-color .2s ease;
 }
+
 .btn{
     cursor:pointer;
 }
@@ -39,7 +41,8 @@ h4, li{
   }
 
 .form,
-.greetings{
+.greetings,
+.js-toDoForm{
     display: none;
 }
 
@@ -63,16 +66,4 @@ h4, li{
   height:100%;
   z-index:-1;
   animation: fadeIn 0.5s linear;
-}
-
-.container{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items: center;
-}
-
-.item{
-  flex:1;
-  flex-basis: auto;
 }
